@@ -65,7 +65,7 @@ const data = [
 ];
 
 
-// Coins Management Section
+// Coin Management Section
 let coins=100;
 document.getElementById("coins").innerText=`${coins}`;
 const manageCoins = () =>{
