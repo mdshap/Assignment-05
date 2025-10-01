@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,51 +18,51 @@
       type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <title>Emergency Service</title>
   </head>
 
   <body class="max-w-[1480px] mx-auto bg-green-50">
     <header class="w-full bg-white">
       <nav class="w-full">
-        <div class="w-full  items-center h-[130px] shadow-sm">
-          <div class="h-full flex flex-col sm:flex-row items-center sm:justify-between justify-around mx-[50px]">
-            <div class="flex  items-center gap-2">
+        <div class="w-full items-center h-[130px] shadow-sm">
+          <div
+            class="h-full flex flex-col sm:flex-row items-center sm:justify-between justify-around mx-[50px]">
+            <div class="flex items-center gap-2">
               <img class="w-[50px]" src="assets/logo.png" alt="" />
               <p class="sm:text-xl text-2xl font-bold text-green-800 leading-5">
                 Emergency <br class="hidden sm:block" />Service
               </p>
             </div>
 
-            <div class="flex sm:w-[400px] gap-3 justify-between sm:justify-normal">
-
+            <div
+              class="flex sm:w-[400px] gap-3 justify-between sm:justify-normal">
               <div
                 class="bg-green-100 py-2 px-4 sm:px-6 rounded-4xl flex items-center justify-between w-[120px]">
                 <div>
-                <p id="hearts" class="font-semibold text-xl"></p>
+                  <p id="hearts" class="font-semibold text-xl"></p>
                 </div>
-                  <div class=""><img class="w-[40px]" src="assets/heart.png" alt=""></div>
-                
+                <div class="">
+                  <img class="w-[40px]" src="assets/heart.png" alt="" />
+                </div>
               </div>
 
               <div
                 class="bg-green-100 py-2 px-4 sm:px-6 rounded-4xl flex items-center justify-between w-[120px]">
                 <p id="coins" class="font-semibold text-xl w-[40%]"></p>
-                <div >
-                  <img class="w-[30px]"  src="assets/coin.png" alt="" />
+                <div>
+                  <img class="w-[30px]" src="assets/coin.png" alt="" />
                 </div>
               </div>
 
-              <div 
+              <div
                 class="bg-green-600 py-2 px-6 sm:px-8 rounded-4xl flex items-center justify-center gap-3 text-white">
                 <p id="copy" class="font-semibold text-xl"></p>
                 <div class="font-semibold text-xl">
                   <p>Copy</p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </nav>
@@ -84,37 +83,36 @@
     </header>
 
     <main class="py-[50px] mx-[30px] flex-col-reverse md:flex-row flex">
-      <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full md:w-[75%]"></div>
+      <div
+        id="cards-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full md:w-[75%]"></div>
 
-      <div class="call-history-section w-full mb-5 md:mb-none md:w-[25%] h-full mx-[auto] md:ml-[20px] px-4 py-10 bg-white rounded-xl shadow-md">
-        <div
-          class="call-history w-full flex justify-between items-center">
+      <div
+        class="call-history-section w-full mb-5 md:mb-none md:w-[25%] h-full mx-[auto] md:ml-[20px] px-4 py-10 bg-white rounded-xl shadow-md">
+        <div class="call-history w-full flex justify-between items-center">
           <div>
             <span><i class="fa-solid fa-clock-rotate-left"></i></span>
             <span class="text-lg font-semibold">Call History</span>
           </div>
 
-          <div onclick="clearCallHistory()"
+          <div
+            onclick="clearCallHistory()"
             class="bg-green-600 btn py-2 px-8 rounded-4xl flex items-center justify-center text-white h-[40px]">
             <div class="font-semibold text-xl">
               <p>Clear</p>
             </div>
           </div>
-
-          
         </div>
 
         <div id="when-call-history-empty">
           <div class="bg-gray-100 rounded-md px-2 py-2 mt-2">
-                <div>
-                <h3 class="text-[14px] text-center">Call History is Empty</h3>
-                </div>
+            <div>
+              <h3 class="text-[14px] text-center">Call History is Empty</h3>
             </div>
+          </div>
         </div>
-          
-        <div id="call-histories">
-            
-        </div>
+
+        <div id="call-histories"></div>
       </div>
     </main>
 

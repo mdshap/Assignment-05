@@ -64,63 +64,55 @@ const data = [
   },
 ];
 
-
 // Coin Management Section
-let coins=100;
-document.getElementById("coins").innerText=`${coins}`;
-const manageCoins = () =>{
-    
-    if(coins>=20)
-    {
-        coins-=20;
-        document.getElementById("coins").innerText=`${coins}`
-        return true
-    }
-    else{
-        alert('Not Enough Coin')
-        return false
-    }
-
-
-}
-
+let coins = 100;
+document.getElementById("coins").innerText = `${coins}`;
+const manageCoins = () => {
+  if (coins >= 20) {
+    coins -= 20;
+    document.getElementById("coins").innerText = `${coins}`;
+    return true;
+  } else {
+    alert("Not Enough Coin");
+    return false;
+  }
+};
 
 // Heart Management Section
-let hearts=0;
-document.getElementById("hearts").innerText=`${hearts}`
-const manageHeart = () =>{
-    hearts+=1;
-    document.getElementById("hearts").innerText=`${hearts}`
-}
-
+let hearts = 0;
+document.getElementById("hearts").innerText = `${hearts}`;
+const manageHeart = () => {
+  hearts += 1;
+  document.getElementById("hearts").innerText = `${hearts}`;
+};
 
 // Copy Management Section
-let copy=0;
-document.getElementById("copy").innerText=`${copy}`;
-const manageCopy = () =>{
-    copy+=1;
-    document.getElementById("copy").innerText=`${copy}`;
-}
+let copy = 0;
+document.getElementById("copy").innerText = `${copy}`;
+const manageCopy = () => {
+  copy += 1;
+  document.getElementById("copy").innerText = `${copy}`;
+};
 const copyText = (text) => {
-  navigator.clipboard.writeText(text)
+  navigator.clipboard
+    .writeText(text)
     .then(() => alert(`${text} copied to clipboard!`))
-    .catch(err => console.error(err));
-}
+    .catch((err) => console.error(err));
+};
 
-
-const clearCallHistory = () =>{
-
-  document.getElementById("call-histories").innerHTML=""
-    const emptyCallHistoryDiv = document.getElementById("when-call-history-empty");
-    emptyCallHistoryDiv.innerHTML=`<div class="bg-gray-100 rounded-md px-2 py-2 mt-2">
+const clearCallHistory = () => {
+  document.getElementById("call-histories").innerHTML = "";
+  const emptyCallHistoryDiv = document.getElementById(
+    "when-call-history-empty"
+  );
+  emptyCallHistoryDiv.innerHTML = `<div class="bg-gray-100 rounded-md px-2 py-2 mt-2">
                 <div>
                 <h3 class="text-[14px] text-center">Call History is Empty</h3>
                 </div>
-            </div>`
+            </div>`;
 
-  alert('The Call History is Being Cleared...')
-
-}
+  alert("The Call History is Being Cleared...");
+};
 
 const showCards = () => {
   const cardsContainer = document.getElementById("cards-container");
@@ -146,7 +138,9 @@ const showCards = () => {
           </div>
           <div>
             <h2 class="text-2xl font-bold mb-2">${element.number}</h2>
-            <span class="bg-gray-100 text-gray-500 px-3 py-1 rounded-xl">${element.type}</span>
+            <span class="bg-gray-100 text-gray-500 px-3 py-1 rounded-xl">${
+              element.type
+            }</span>
           </div>
 
           <div 
@@ -169,17 +163,16 @@ const showCards = () => {
 };
 
 const addToCallHistory = (index) => {
-    const element = data[index]
-    const coinsStatus = manageCoins();
-    if(!coinsStatus)
-    {
-        return
-    }
-    alert(`Calling ${element.service} ${element.number}...`)
+  const element = data[index];
+  const coinsStatus = manageCoins();
+  if (!coinsStatus) {
+    return;
+  }
+  alert(`Calling ${element.service} ${element.number}...`);
 
-    document.getElementById("when-call-history-empty").innerHTML=""
-    let time= new Date();
-    time=time.toLocaleTimeString()
+  document.getElementById("when-call-history-empty").innerHTML = "";
+  let time = new Date();
+  time = time.toLocaleTimeString();
   const callHistoryDiv = document.getElementById("call-histories");
   const newDiv = document.createElement("div");
   newDiv.innerHTML = `<div class="bg-gray-100 rounded-md px-2 py-2 mt-2 flex justify-between items-center">
